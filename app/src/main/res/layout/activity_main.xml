@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242530"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="end|bottom"
+        android:hint="@string/_0"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn1"
+        style="@style/customButtonStyle"
+        android:background="@color/color_blue"
+        android:onClick="onClearClicked"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn2"
+        style="@style/customButtonStyle"
+        android:background="@color/color_blue"
+        android:onClick="onOperatorClicked"
+        android:text="/"
+        android:textColor="@color/color_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn3"
+        style="@style/customButtonStyle"
+        android:background="@color/color_blue"
+        android:onClick="onOperatorClicked"
+        android:text="@string/multp"
+        android:textColor="@color/color_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintEnd_toStartOf="@+id/btn4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn4"
+        style="@style/customButtonStyle"
+        android:background="@color/color_blue"
+        android:onClick="onDeleteClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_backspace_24"
+        android:tint="@color/color_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn3" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn5"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_7"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn6"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_8"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn7"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_9"
+        app:layout_constraintEnd_toStartOf="@+id/btn4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn8"
+        style="@style/customButtonStyle"
+        android:background="@color/color_blue"
+        android:onClick="onOperatorClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_backspace_24"
+        android:text="@string/minus"
+        android:textColor="@color/color_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn9"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_4"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn10"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_5"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn11"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_6"
+        app:layout_constraintEnd_toStartOf="@+id/btn4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn12"
+        style="@style/customButtonStyle"
+        android:background="@color/color_blue"
+        android:onClick="onOperatorClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_backspace_24"
+        android:text="@string/plus"
+        android:textColor="@color/color_yellow"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn13"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_1"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn14"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_2"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn15"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_3"
+        app:layout_constraintEnd_toStartOf="@+id/btn4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn16"
+        style="@style/customButtonStyle"
+        android:background="@color/color_yellow"
+        android:onClick="onEqualsClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_backspace_24"
+        android:text="@string/equals"
+        android:textSize="40sp"
+        app:layout_constraintDimensionRatio="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn17"
+        style="@style/customButtonStyle"
+        android:onClick="onOperatorClicked"
+        android:text="@string/percent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn15" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn18"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn15" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn19"
+        style="@style/customButtonStyle"
+        android:onClick="onNumberClick"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn15" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
